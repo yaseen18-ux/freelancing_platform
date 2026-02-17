@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+
+{% block title %}Recruiter Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ user.username }} (Recruiter)</h2>
+<p>Here are the jobs you posted and applications:</p>
+
+<ul class="list-group">
+    {% for job in jobs %}
+    <li class="list-group-item">
+        <strong>{{ job.title }}</strong> - {{ job.description }}
+        <ul class="list-group mt-2">
+            {% for application in job.applications.all %}
+            <li class="list-group-item">
+                {{ application.freelancer.username }} - {{ application.status }}
+                <p>{{ application.cover_letter }}</p>
+            </li>
+            {% empty %}
+            <li class="list-group-item">No applications yet</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% empty %}
+    <li class="list-group-item">You haven't posted any jobs yet</li>
+    {% endfor %}
+</ul>
+{% endblock %}

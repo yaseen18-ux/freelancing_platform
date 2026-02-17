@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+
+{% block title %}Freelancer Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ user.username }} (Freelancer)</h2>
+<p>Here are the available jobs you can apply for:</p>
+
+<ul class="list-group">
+    {% for job in jobs %}
+    <li class="list-group-item">
+        <strong>{{ job.title }}</strong> - {{ job.description }}
+        <form method="POST" action="/api/accounts/applications/">
+            {% csrf_token %}
+            <input type="hidden" name="job" value="{{ job.id }}">
+            <textarea name="cover_letter" class="form-control mb-2" placeholder="Write your cover letter"></textarea>
+            <button type="submit" class="btn btn-primary btn-sm">Apply</button>
+        </form>
+    </li>
+    {% empty %}
+    <li class="list-group-item">No jobs available</li>
+    {% endfor %}
+</ul>
+{% endblock %}
