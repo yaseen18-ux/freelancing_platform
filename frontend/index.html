@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Freelance Platform - Connect Talent & Opportunities</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="../images/logo_freelancer_com_icon_160826.png" alt="logo" class="navbar-logo">
+                <h1 class="navbar-title">FreelanceHub</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="home.html" class="nav-link">Hire</a></li>
+                <li><a href="freelancer-dashboard.html" class="nav-link">Find Jobs</a></li>
+            </ul>
+            <div class="navbar-right" id="navbarRight">
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="sign-up.html" class="nav-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Talent. Post Work. Get Things Done.</h1>
+                <p class="hero-subtitle">Connect with top freelancers from around the world or find amazing opportunities to grow your career</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="window.location.href='sign-up.html'">
+                        Get Started Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary btn-lg" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+                        Learn More <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="section-header">
+                <h2>Why Choose FreelanceHub?</h2>
+                <p>The world's most trusted platform for connecting talent and opportunities</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Safe & Secure</h3>
+                    <p>Protect your work with secure payments and verified members</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fa-solid fa-lightning-bolt"></i></div>
+                    <h3>Quick & Easy</h3>
+                    <p>Start working within minutes with our streamlined platform</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor projects, earnings, and milestones in real-time</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>Build Relationships</h3>
+                    <p>Work with top talent and grow long-term partnerships</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <h3>Competitive Rates</h3>
+                    <p>Access projects across all budget ranges</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Global Network</h3>
+                    <p>Connect with thousands of professionals worldwide</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Get started in three simple steps</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Account</h3>
+                    <p>Sign up as a freelancer or employer in under 2 minutes</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Find or Post Work</h3>
+                    <p>Browse jobs or post your project to find the right talent</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Collaborate & Deliver</h3>
+                    <p>Work together and deliver amazing results</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat">
+                <h3>5000+</h3>
+                <p>Active Freelancers</p>
+            </div>
+            <div class="stat">
+                <h3>10000+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+                <h3>50+</h3>
+                <p>Job Categories</p>
+            </div>
+            <div class="stat">
+                <h3>$2M+</h3>
+                <p>Total Paid Out</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Get Started?</h2>
+            <p>Join thousands of freelancers and employers building amazing projects</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary btn-lg" onclick="window.location.href='sign-up.html'">
+                    Sign Up Now
+                </button>
+                <button class="btn btn-secondary btn-lg" onclick="window.location.href='login.html'">
+                    Already Have an Account?
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FreelanceHub</h4>
+                <p>Connect with talent. Get work done.</p>
+            </div>
+            <div class="footer-section">
+                <h4>For Freelancers</h4>
+                <ul>
+                    <li><a href="#">Find Jobs</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>For Employers</h4>
+                <ul>
+                    <li><a href="#">Post Job</a></li>
+                    <li><a href="#">Find Talent</a></li>
+                    <li><a href="#">Manage Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FreelanceHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

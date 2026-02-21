@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Freelancing Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="../images/logo_freelancer_com_icon_160826.png" alt="logo" class="navbar-logo">
+                <h1 class="navbar-title">FreelanceHub</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="home.html" class="nav-link">Hire</a></li>
+                <li><a href="freelancer-dashboard.html" class="nav-link">Find Jobs</a></li>
+            </ul>
+            <div class="navbar-right" id="navbarRight">
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="home.html" class="back-button"><i class="fa-solid fa-arrow-left"></i> Back</a>
+        
+        <div class="signup-container">
+            <div class="form-image">
+                <div class="image-content">
+                    <h2>Get Started</h2>
+                    <p>Join thousands of freelancers and employers building amazing projects</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> 100% Free to Join</li>
+                        <li><i class="fa-solid fa-check"></i> Secure & Verified</li>
+                        <li><i class="fa-solid fa-check"></i> Flexible Work</li>
+                        <li><i class="fa-solid fa-check"></i> Instant Payments</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h1>Create Account</h1>
+                    <p>Start your freelancing journey today</p>
+                </div>
+                
+                <form action="" class="signup-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Create Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="Create a strong password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock-open"></i>
+                            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>I am a*</label>
+                        <div class="role-selector">
+                            <input type="radio" id="freelancer" name="role" value="freelancer" required>
+                            <label for="freelancer" class="role-label">
+                                <span class="radio-circle"></span>
+                                <i class="fa-solid fa-briefcase"></i> Freelancer
+                            </label>
+                            
+                            <input type="radio" id="recruiter" name="role" value="recruiter" required>
+                            <label for="recruiter" class="role-label">
+                                <span class="radio-circle"></span>
+                                <i class="fa-solid fa-building"></i> Recruiter/Employer
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <span>Create Account</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html" class="login-link">Sign in here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

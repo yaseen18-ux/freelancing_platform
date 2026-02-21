@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Profile - FreelanceHub</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="../images/logo_freelancer_com_icon_160826.png" alt="logo" class="navbar-logo">
+                <h1 class="navbar-title">FreelanceHub</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="home.html" class="nav-link">Hire</a></li>
+                <li><a href="freelancer-dashboard.html" class="nav-link">Find Jobs</a></li>
+            </ul>
+            <div class="navbar-right" id="navbarRight">
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="sign-up.html" class="nav-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="profile-container">
+        <div class="profile-wrapper">
+            <div class="profile-sidebar">
+                <div class="sidebar-menu">
+                    <a href="#" class="menu-item active">
+                        <i class="fa-solid fa-user"></i> My Profile
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-briefcase"></i> Portfolio
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-star"></i> Reviews
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-cog"></i> Settings
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-main">
+                <!-- Profile Card -->
+                <div class="profile-card">
+                    <div class="profile-loading">
+                        <p>Loading profile...</p>
+                    </div>
+                </div>
+
+                <!-- Edit Profile Form -->
+                <div class="edit-profile-form" style="display: none;">
+                    <h2>Edit Profile</h2>
+                    <form id="editProfileForm">
+                        <div class="form-group">
+                            <label for="title">Professional Title</label>
+                            <input type="text" id="title" placeholder="e.g., Web Developer, UI Designer" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea id="bio" placeholder="Tell us about yourself..." class="form-input" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hourly_rate">Hourly Rate ($)</label>
+                            <input type="number" id="hourly_rate" placeholder="50" class="form-input" min="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">Skills</label>
+                            <input type="text" id="skills" placeholder="e.g., Java, Python, JavaScript" class="form-input">
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-secondary" onclick="ProfileManager.showEditForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FreelanceHub</h4>
+                <p>Connect with talent. Get work done.</p>
+            </div>
+            <div class="footer-section">
+                <h4>For Freelancers</h4>
+                <ul>
+                    <li><a href="#">Find Jobs</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>For Employers</h4>
+                <ul>
+                    <li><a href="#">Post Job</a></li>
+                    <li><a href="#">Find Talent</a></li>
+                    <li><a href="#">Manage Projects</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FreelanceHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize navbar
+            NavbarManager.init();
+            
+            // Load profile
+            ProfileManager.loadProfile();
+        });
+    </script>
+</body>
+</html>

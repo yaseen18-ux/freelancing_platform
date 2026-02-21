@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Freelancer Dashboard - FreelanceHub</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="../images/logo_freelancer_com_icon_160826.png" alt="logo" class="navbar-logo">
+                <h1 class="navbar-title">FreelanceHub</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="home.html" class="nav-link">Hire</a></li>
+                <li><a href="freelancer-dashboard.html" class="nav-link active">Find Jobs</a></li>
+            </ul>
+            <div class="navbar-right" id="navbarRight">
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="sign-up.html" class="nav-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-user">
+                <img src="https://ui-avatars.com/api/?name=User" alt="User" class="user-avatar">
+                <h3 class="sidebar-username">John Doe</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="sidebar-link active" onclick="showSection('dashboard')">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </a>
+                <a href="#browse" class="sidebar-link" onclick="showSection('browse')">
+                    <i class="fa-solid fa-briefcase"></i> Browse Jobs
+                </a>
+                <a href="#applications" class="sidebar-link" onclick="showSection('applications')">
+                    <i class="fa-solid fa-file-lines"></i> My Applications
+                </a>
+                <a href="#earnings" class="sidebar-link" onclick="showSection('earnings')">
+                    <i class="fa-solid fa-dollar-sign"></i> Earnings
+                </a>
+                <a href="#profile.html" class="sidebar-link">
+                    <i class="fa-solid fa-user"></i> Profile
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="dashboard-section active">
+                <h1>Welcome back, Freelancer!</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="stat-info">
+                            <h3>Active Jobs</h3>
+                            <p class="stat-number">3</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-file-lines"></i></div>
+                        <div class="stat-info">
+                            <h3>Pending Applications</h3>
+                            <p class="stat-number">5</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                        <div class="stat-info">
+                            <h3>This Month's Earnings</h3>
+                            <p class="stat-number">$2,450</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="stat-info">
+                            <h3>Rating</h3>
+                            <p class="stat-number">4.8/5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 40px;">Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fa-solid fa-check-circle"></i></div>
+                        <div class="activity-content">
+                            <h4>Project Completed</h4>
+                            <p>You completed "Website Redesign" project</p>
+                            <small>2 days ago</small>
+                        </div>
+                        <div class="activity-amount">+$500</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fa-solid fa-user-check"></i></div>
+                        <div class="activity-content">
+                            <h4>Job Accepted</h4>
+                            <p>Your proposal for "Mobile App Development" was accepted</p>
+                            <small>5 days ago</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Browse Jobs Section -->
+            <section id="browse" class="dashboard-section">
+                <h1>Browse Available Jobs</h1>
+                <div class="filter-bar">
+                    <input type="search" placeholder="Search jobs..." class="filter-input">
+                    <select class="filter-select">
+                        <option>All Categories</option>
+                        <option>Web Development</option>
+                        <option>Mobile Development</option>
+                        <option>Design</option>
+                        <option>Writing</option>
+                    </select>
+                </div>
+                <div class="jobs-container">
+                    <!-- Jobs will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Applications Section -->
+            <section id="applications" class="dashboard-section">
+                <h1>My Applications</h1>
+                <div class="applications-list">
+                    <div class="application-card">
+                        <div class="app-header">
+                            <h3>Website Redesign</h3>
+                            <span class="app-status pending">Pending</span>
+                        </div>
+                        <p class="app-proposal">Proposed bid: $1,500</p>
+                        <small>Applied 3 days ago</small>
+                    </div>
+                    <div class="application-card">
+                        <div class="app-header">
+                            <h3>Mobile App Development</h3>
+                            <span class="app-status accepted">Accepted</span>
+                        </div>
+                        <p class="app-proposal">Proposed bid: $3,000</p>
+                        <small>Applied 1 week ago</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Earnings Section -->
+            <section id="earnings" class="dashboard-section">
+                <h1>Earnings Overview</h1>
+                <div class="earnings-summary">
+                    <div class="earning-box">
+                        <h3>Total Earnings</h3>
+                        <p class="earning-amount">$8,950</p>
+                    </div>
+                    <div class="earning-box">
+                        <h3>This Month</h3>
+                        <p class="earning-amount">$2,450</p>
+                    </div>
+                    <div class="earning-box">
+                        <h3>Available to Withdraw</h3>
+                        <p class="earning-amount">$2,200</p>
+                    </div>
+                </div>
+
+                <h2>Recent Transactions</h2>
+                <div class="transactions-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Website Redesign</td>
+                                <td>$1,500</td>
+                                <td>Feb 15, 2026</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>API Development</td>
+                                <td>$950</td>
+                                <td>Feb 10, 2026</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.dashboard-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Remove active from all sidebar links
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            event.target.closest('.sidebar-link').classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (AuthService.isAuthenticated()) {
+                const user = AuthService.getUser();
+                document.querySelector('.sidebar-username').textContent = user.username;
+                document.querySelector('.user-avatar').src = `https://ui-avatars.com/api/?name=${user.username}`;
+                JobManager.loadFreelancerJobs();
+            } else {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>
